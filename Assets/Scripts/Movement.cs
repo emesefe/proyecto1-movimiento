@@ -36,7 +36,11 @@ public class Movement : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
         
         // Movimiento lateral afectado por el input del usuario (horizontal)
-        transform.Translate(Vector3.right * lateralSpeed * Time.deltaTime * horizontalInput);
+        //transform.Translate(Vector3.right * lateralSpeed * Time.deltaTime * horizontalInput);
+        
+        transform.Rotate(Vector3.up, lateralSpeed * Time.deltaTime * horizontalInput);
+        
+        
 
         // camera.transform.position = transform.position + offset;
     }
